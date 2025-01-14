@@ -1,0 +1,71 @@
+{
+  "name": "happytalk-sdk-loader",
+  "version": "1.0.1",
+  "description": "모던 웹 프레임워크를 위한 비공식 (Unofficial) 해피톡 채팅 SDK 로더",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lunaiz-corp/happytalk-sdk-loader.git"
+  },
+  "keywords": [
+    "crm",
+    "happytalk",
+    "livechat",
+    "chatbot",
+    "messenger"
+  ],
+  "author": {
+    "email": "minsu.kim@lunaiz.com",
+    "name": "Minsu Kim",
+    "url": "https://github.com/kms0219kms"
+  },
+  "contributors": [
+    {
+      "email": "minsu.kim@lunaiz.com",
+      "name": "Minsu Kim",
+      "url": "https://github.com/kms0219kms"
+    }
+  ],
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/lunaiz-corp/happytalk-sdk-loader/issues"
+  },
+  "scripts": {
+    "fix": "gts fix",
+    "lint": "gts lint",
+    "clean": "gts clean",
+    "check": "gts check",
+    "build": "tsup src/index.ts",
+    "build:typedoc": "typedoc src/index.ts",
+    "prepublish": "pnpm build"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.2.0",
+    "@eslint/js": "^9.18.0",
+    "@types/node": "^22.10.6",
+    "eslint": "^9.18.0",
+    "gts": "^6.0.2",
+    "tsup": "^8.3.5",
+    "typedoc": "^0.27.6",
+    "typescript": "^5.7.3"
+  },
+  "tsup": {
+    "entry": [
+      "src/index.ts"
+    ],
+    "format": [
+      "cjs",
+      "esm"
+    ],
+    "sourcemap": true,
+    "treeshake": true,
+    "clean": true,
+    "minify": true,
+    "dts": true
+  },
+  "packageManager": "pnpm@10.0.0+sha512.b8fef5494bd3fe4cbd4edabd0745df2ee5be3e4b0b8b08fa643aa3e4c6702ccc0f00d68fa8a8c9858a735a0032485a44990ed2810526c875e416f001b17df12b"
+}
